@@ -28,18 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
+            txtInputFile = new TextBox();
+            btnSelectFile = new Button();
+            btnConvert = new Button();
             SuspendLayout();
+            // 
+            // txtInputFile
+            // 
+            txtInputFile.Location = new Point(37, 44);
+            txtInputFile.Name = "txtInputFile";
+            txtInputFile.Size = new Size(1004, 36);
+            txtInputFile.TabIndex = 0;
+            // 
+            // btnSelectFile
+            // 
+            btnSelectFile.Location = new Point(1047, 38);
+            btnSelectFile.Name = "btnSelectFile";
+            btnSelectFile.Size = new Size(68, 46);
+            btnSelectFile.TabIndex = 1;
+            btnSelectFile.Text = "...";
+            btnSelectFile.UseVisualStyleBackColor = true;
+            btnSelectFile.Click += btnSelectFile_Click;
+            // 
+            // btnConvert
+            // 
+            btnConvert.Location = new Point(37, 102);
+            btnConvert.Name = "btnConvert";
+            btnConvert.Size = new Size(1078, 46);
+            btnConvert.TabIndex = 2;
+            btnConvert.Text = "Convert";
+            btnConvert.UseVisualStyleBackColor = true;
+            btnConvert.Click += btnConvert_Click;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(13F, 29F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1163, 445);
+            ClientSize = new Size(1163, 198);
+            Controls.Add(btnConvert);
+            Controls.Add(btnSelectFile);
+            Controls.Add(txtInputFile);
+            Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "MainForm";
             Text = "WordPress eXtended RSS 2 Descktop Ganjoor DB";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox txtInputFile;
+        private Button btnSelectFile;
+        private Button btnConvert;
     }
 }

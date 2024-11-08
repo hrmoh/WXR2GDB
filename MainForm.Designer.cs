@@ -37,6 +37,10 @@
             txtOutputFile = new TextBox();
             label3 = new Label();
             txtCatTitle = new TextBox();
+            label4 = new Label();
+            btnSelectTextOutput = new Button();
+            txtTextOutput = new TextBox();
+            btnExport = new Button();
             SuspendLayout();
             // 
             // txtInputFile
@@ -60,7 +64,7 @@
             // 
             // btnConvert
             // 
-            btnConvert.Location = new Point(37, 237);
+            btnConvert.Location = new Point(37, 206);
             btnConvert.Name = "btnConvert";
             btnConvert.Size = new Size(1078, 46);
             btnConvert.TabIndex = 2;
@@ -122,11 +126,52 @@
             txtCatTitle.TabIndex = 8;
             txtCatTitle.Text = "جدید";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(31, 271);
+            label4.Name = "label4";
+            label4.Size = new Size(63, 29);
+            label4.TabIndex = 11;
+            label4.Text = "TXT:";
+            // 
+            // btnSelectTextOutput
+            // 
+            btnSelectTextOutput.Location = new Point(1056, 262);
+            btnSelectTextOutput.Name = "btnSelectTextOutput";
+            btnSelectTextOutput.Size = new Size(68, 46);
+            btnSelectTextOutput.TabIndex = 10;
+            btnSelectTextOutput.Text = "...";
+            btnSelectTextOutput.UseVisualStyleBackColor = true;
+            btnSelectTextOutput.Click += btnSelectTextOutput_Click;
+            // 
+            // txtOutput
+            // 
+            txtTextOutput.Location = new Point(112, 268);
+            txtTextOutput.Name = "txtOutput";
+            txtTextOutput.Size = new Size(938, 36);
+            txtTextOutput.TabIndex = 9;
+            txtTextOutput.Text = "C:\\g\\naser.txt";
+            // 
+            // btnExport
+            // 
+            btnExport.Location = new Point(37, 324);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(1078, 46);
+            btnExport.TabIndex = 12;
+            btnExport.Text = "Export";
+            btnExport.UseVisualStyleBackColor = true;
+            btnExport.Click += btnExport_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(13F, 29F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1163, 325);
+            ClientSize = new Size(1163, 419);
+            Controls.Add(btnExport);
+            Controls.Add(label4);
+            Controls.Add(btnSelectTextOutput);
+            Controls.Add(txtTextOutput);
             Controls.Add(txtCatTitle);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -154,5 +199,9 @@
         private TextBox txtOutputFile;
         private Label label3;
         private TextBox txtCatTitle;
+        private Label label4;
+        private Button btnSelectTextOutput;
+        private TextBox txtTextOutput;
+        private Button btnExport;
     }
 }
